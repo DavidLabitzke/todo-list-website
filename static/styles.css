@@ -1,0 +1,45 @@
+body {
+  position: relative;
+  background-color: #00FF7F;
+}
+footer{
+  position: absolute;
+  bottom: 0;
+}
+
+hr{
+  size:40px;
+  color: #000;
+}
+
+.loginRegister {
+  font-size: 20px;
+  color: #fff;
+  background-color: #33FF99;
+  margin-top: 1em;
+  width: 300px;
+  height: 50px;
+}
+
+.mainForm {
+  text-align: center;
+}
+
+.newSectionHeader {
+    text-decoration: underline;
+}
+
+.tasks {
+    margin-top: 3rem;
+    text-align: center;
+}
+.taskItem {
+    text-align: left;
+    margin-left: 34rem;
+}
+
+.title{
+  text-align: center;
+  font-size: 80px;
+  font-family: sans-serif;
+}

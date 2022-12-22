@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>To Do List Service</title>
+  <link rel="stylesheet" href="../static/styles.css">
+  <link rel="icon" href="../static/favicon.ico">
+</head>
+
+<body>
+  <h1 class="title">Welcome back!</h1>
+  <hr>
+  <div class="mainForm">
+    <form method="post" action="/add">
+      <h2 class="newSectionHeader">Enter A New Task Below</h2>
+      <input type="text" name="newTask" maxlength="100" size="80" placeholder="Up to 100 Characters">
+      <br>
+      <button class="loginRegister" type="submit">Submit</button>
+    </form>
+
+  </div>
+  <div class="tasks">
+    <h2 class="newSectionHeader">Tasks To Complete</h2>
+    {% if tasks == [] %}
+    <p>No New Tasks Yet</p>
+    {% else %}
+    <ul>
+      {% for task in tasks %}
+      <li class="taskItem">{{ task["task"] }} <a href="{{ url_for('remove_task', id=task.id) }}">Done</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+<!-- Consider using a table to display all tasks needing completed -->
+</body>
+
+</html>
